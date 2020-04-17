@@ -2,15 +2,15 @@ var inp = document.getElementById('result');
 var par = document.getElementById('p');
 
 inp.addEventListener('blur', func);
-
+document.onclick = function() {
+   window.navigator.vibrate(200);
+}
 function func() {
    let time = inp.value;
 	let timer = setInterval(function() {
       if(time <= 0) {
          time = 0 + 1;
          clearInterval(timer);
-         window.navigator.vibration(500);
-         
       }
       inp.onclick = function() {
          clearInterval(timer);
