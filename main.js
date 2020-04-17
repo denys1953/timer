@@ -3,7 +3,7 @@ var par = document.getElementById('p');
 
 inp.addEventListener('blur', func);
 document.onclick = function() {
-   window.navigator.vibrate(200);
+   navigator.vibrate(200);
 }
 function func() {
    let time = inp.value;
@@ -11,6 +11,7 @@ function func() {
       if(time <= 0) {
          time = 0 + 1;
          clearInterval(timer);
+         navigator.vibrate(200);
       }
       inp.onclick = function() {
          clearInterval(timer);
