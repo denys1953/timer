@@ -9,7 +9,7 @@ function func() {
       if(time <= 0) {
          time = 0 + 1;
          clearInterval(timer);
-         window.Navigator.vibration(500);
+         window.navigator.vibration(500);
          
       }
       inp.onclick = function() {
